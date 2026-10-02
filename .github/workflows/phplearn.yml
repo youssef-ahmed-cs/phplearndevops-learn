@@ -1,4 +1,4 @@
-name: SSH into VPS and deploy
+name: SSH into VPS and deploy (phplearnvps)
 
 on:
   push:
@@ -21,17 +21,10 @@ jobs:
           script: |
             set -e
 
-            cd /var/www/html/laracast
+            cd /var/www/html/phplearnvps
 
             git fetch origin
             git reset --hard origin/main
             git clean -fd
-
-            composer install --no-dev --optimize-autoloader
-
-            php artisan optimize:clear
-            php artisan config:cache
-            php artisan route:cache
-            php artisan view:cache
 
             echo "Deployment completed successfully."
