@@ -22,5 +22,9 @@ jobs:
             set -e
 
             cd /var/www/html/phplearnvps
+            
+            git fetch origin
+            git reset --hard origin/main
+            git clean -fd
 
             echo "Deployment completed successfully."
