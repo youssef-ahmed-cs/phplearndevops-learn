@@ -5,7 +5,9 @@ $user_data = [
     "status" => "success",
     "user" => [
         "id" => 101,
-        "role" => "admin"
+        "role" => "admin",
+        "name" => "Youssef Ahmed",
+        "age" => 23
     ]
 ];
 
